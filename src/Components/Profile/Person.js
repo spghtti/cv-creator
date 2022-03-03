@@ -15,6 +15,10 @@ class Person extends Component {
             <input type="text" className="text-input" id="name-input"></input>
           </div>
           <div>
+            <label for="title-input">Job title:</label>
+            <input type="text" className="text-input" id="title-input"></input>
+          </div>
+          <div>
             <label for="address-input">Address:</label>
             <input
               type="text"

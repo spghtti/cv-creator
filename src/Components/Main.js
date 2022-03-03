@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 import Person from './Profile/Person';
-import Preview from './Preview/Preview';
+import PreviewMain from './PreviewMain';
 import Education from './Profile/Education';
 import Experience from './Profile/Experience';
 
@@ -18,7 +18,7 @@ class Main extends Component {
           <Experience />
         </div>
         <div className="App-preview">
-          <Preview />
+          <PreviewMain />
         </div>
       </div>
     );

@@ -1,12 +1,12 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 
-class Preview extends Component {
+class ContactSkillsPane extends Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return <div className="Preview-main">Test</div>;
+    return <div className="Preview-contact-skills-pane">Test</div>;
   }
 }
-export default Preview;
+export default ContactSkillsPane;

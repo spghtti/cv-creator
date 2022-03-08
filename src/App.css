@@ -95,13 +95,72 @@ label {
   height: 20px;
   font-size: 50px;
 }
+
 #Preview-job-title {
   width: 100%;
   font-size: 25px;
 }
+
 .Preview-contact-skills-pane {
   position: absolute;
   height: 1122px;
   width: 250px;
-  background-color: #5e5e5e;
+  background-color: #6a6a6a;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Preview-picture {
+  background-color: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-left: 25px;
+  margin-bottom: 75px;
+}
+
+.Preview-panel-list {
+  display: flex;
+  color: white;
+  width: 80%;
+  min-height: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+li span {
+  position: relative;
+  left: -3px;
+}
+
+.Preview-panel-div {
+  color: white;
+  margin-bottom: 100px;
+}
+
+.Preview-contact-div {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  word-break: break-all;
+  color: white;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.Preview-contact-div > * > h3 {
+  color: blue;
+}
+
+.Preview-panel-headline {
+  width: 100%;
+  height: 30px;
+  border-bottom: 4px solid white;
+}
+
+.Preview-icon {
+  height: 35px;
+  width: 35px;
 }

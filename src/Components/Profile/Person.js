@@ -35,6 +35,14 @@ class Person extends Component {
             <input type="text" className="text-input" id="email-input"></input>
           </div>
           <div>
+            <label for="website-input">Website:</label>
+            <input
+              type="text"
+              className="text-input"
+              id="website-input"
+            ></input>
+          </div>
+          <div>
             <button>Add</button>
           </div>
         </div>

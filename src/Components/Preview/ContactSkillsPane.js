@@ -75,6 +75,9 @@ class ContactSkillsPane extends Component {
               <li>
                 <span>Test</span>
               </li>
+              <li>
+                <span>This is a test</span>
+              </li>
             </ul>
           </div>
         </div>

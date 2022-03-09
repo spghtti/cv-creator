@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PreviewNameTitle from './Preview/NameTitle';
 import ContactSkillsPane from './Preview/ContactSkillsPane';
+import PreviewExperience from './Preview/PreviewExperience';
 
 class PreviewMain extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class PreviewMain extends Component {
       <div className="Preview-main">
         <ContactSkillsPane />
         <PreviewNameTitle />
+        <PreviewExperience />
       </div>
     );
   }

@@ -9,11 +9,21 @@ class Footer extends Component {
     return (
       <footer className="App-footer">
         <p>
-          Copyright © 2022 <a href="https://github.com/spghtti">spghtti </a>
+          © 2022{' '}
+          <a href="https://github.com/spghtti" className="App-link">
+            spghtti{' '}
+            <img
+              alt=""
+              height="15px"
+              width="15px"
+              src={require('./Preview/Icons/github.png')}
+            />{' '}
+          </a>
           -- Icons created by
           <a
             href="https://www.flaticon.com/free-icons/phone"
             title="phone icons"
+            className="App-link"
           >
             Freepik
           </a>

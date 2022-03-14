@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ExperienceEntry from './ExperienceEntry';
 
 class PreviewExperience extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class PreviewExperience extends Component {
         <div className="Preview-experience-header">
           <h2>EXPERIENCE</h2>
         </div>
+        <ExperienceEntry />
       </div>
     );
   }

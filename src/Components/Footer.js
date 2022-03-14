@@ -19,7 +19,7 @@ class Footer extends Component {
               src={require('./Preview/Icons/github.png')}
             />{' '}
           </a>
-          -- Icons created by
+          -- Icons created by{' '}
           <a
             href="https://www.flaticon.com/free-icons/phone"
             title="phone icons"

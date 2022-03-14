@@ -12,10 +12,12 @@ class Main extends Component {
   render() {
     return (
       <div className="App-main">
-        <div className="App-info">
-          <Person />
-          <Education />
-          <Experience />
+        <div className="App-info-div">
+          <div className="App-info">
+            <Person />
+            <Education />
+            <Experience />
+          </div>
         </div>
         <div className="App-preview">
           <PreviewMain />

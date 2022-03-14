@@ -1,10 +1,32 @@
 /* eslint-disable no-useless-constructor */
+/* eslint-disable no-restricted-globals */
+
 import React, { Component } from 'react';
 
 class Person extends Component {
   constructor(props) {
     super(props);
+    this.setPerson = this.setPerson.bind(this);
+    this.state = {
+      name: 'Jim Doe',
+      title: 'Full-stack web developer',
+      address: '555 main street',
+      phone: '202-555-1113',
+      email: 'johndoe392342@gmail.com',
+      website: 'johndoe392342.io',
+    };
   }
+
+  setPerson = () => {
+    // const input = document.getElementById('task-name');
+    // const array = [...this.state.tasklist];
+    // array.push(input.value);
+    // this.setState({
+    //   tasklist: array,
+    // });
+    // input.value = '';
+  };
+
   render() {
     return (
       <div className="Person-main">

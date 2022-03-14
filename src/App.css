@@ -5,6 +5,10 @@
   width: 100vw;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .App-header {
   min-height: 10vh;
   display: flex;
@@ -15,13 +19,16 @@
   color: black;
 }
 
+.Experience-main > div > label {
+  margin-right: 120px;
+}
+
 .App-main {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  height: auto;
+  height: 100vh;
   width: 100vw;
   gap: 10vw;
 }
@@ -38,12 +45,21 @@
 }
 
 .App-info {
-  width: auto;
-  border: 1px solid rgb(131, 131, 131);
+  display: flex;
+  background-color: rgb(197, 197, 255);
+  padding: 10px 10px 10px 10px;
+  flex-direction: column;
+  border: 1px solid rgb(111, 111, 255);
   border-radius: 5px;
   position: relative;
-  height: auto;
+  width: auto;
   padding-right: 10px;
+  text-align: center;
+}
+
+button {
+  width: 50px;
+  margin-top: 10px;
 }
 
 .App-preview {
@@ -57,6 +73,7 @@
 
 .input-div {
   text-align: right;
+  width: 350px;
 }
 
 label {
@@ -102,7 +119,7 @@ label {
   position: absolute;
   height: 1122px;
   width: 250px;
-  background-color: #6a6a6a;
+  background-color: #271f44;
   justify-content: center;
 }
 
@@ -171,7 +188,6 @@ li span {
 .Preview-experience-main {
   margin-top: 64.5px;
   margin-left: 250px;
-  height: 800px;
 }
 
 .Preview-experience-header {
@@ -183,17 +199,22 @@ li span {
 }
 /* 
 accent colors */
-
 .Preview-contact-div > * > h3,
 .App-link {
-  color: rgb(65, 65, 255);
+  color: rgb(111, 111, 255);
 }
+
 .Preview-name-title {
-  background-color: rgb(65, 65, 255);
+  background-color: rgb(111, 111, 255);
 }
 
 h2 {
   font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 900;
 }
 
 li {
@@ -204,4 +225,44 @@ li {
 
 ul {
   margin-left: 10px;
+}
+
+.Preview-education-entry,
+.Preview-experience-entry {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  gap: 40px;
+  margin-left: 45px;
+  margin-top: 30px;
+}
+
+.Preview-education-year,
+.Preview-experience-year {
+  border-right: 3px solid black;
+  width: 110px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.Preview-education-school,
+.Preview-experience-job {
+  display: flex;
+  flex-direction: column;
+}
+
+.Preview-education-main {
+  margin-top: 64.5px;
+  margin-left: 250px;
+}
+
+.Preview-education-header {
+  text-align: left;
+  padding-left: 8%;
+  border-bottom: 4px solid black;
+  height: 21px;
+  line-height: 0px;
 }

@@ -11,20 +11,28 @@ class Experience extends Component {
         <h2>Experience</h2>
         <div className="input-div">
           <div>
-            <label for="company-input">Company:</label>
+            <label for="employer-input">Employer:</label>
             <input
               type="text"
               className="text-input"
-              id="company-input"
+              id="employer-input"
             ></input>
           </div>
           <div>
-            <label for="role-input">Role:</label>
-            <input type="text" className="text-input" id="role-input"></input>
+            <label for="job-title-input">Job:</label>
+            <input
+              type="text"
+              className="text-input"
+              id="job-title-input"
+            ></input>
           </div>
           <div>
-            <label for="years-input">Years:</label>
-            <input type="text" className="text-input" id="years-input"></input>
+            <label for="job-year-input">Years:</label>
+            <input
+              type="text"
+              className="text-input"
+              id="job-year-input"
+            ></input>
           </div>
           <div>
             <button>Add</button>

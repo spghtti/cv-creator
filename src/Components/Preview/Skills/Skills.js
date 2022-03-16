@@ -1,36 +1,41 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
+import SkillList from './SkillList';
 
 class Skills extends Component {
   constructor(props) {
     super(props);
-    this.setEdit = this.setEdit.bind(this);
     this.state = {
       edit: false,
       skills: [],
     };
   }
 
-  updateSkills = (e) => {
+  updateSkills = (e) => {};
+
+  submitSkills = () => {
+    const input = document.getElementById('skill-input');
     const array = [...this.state.skills];
-    array.push(e.target.value);
+    array.push(input.value);
+    this.setState({ skills: array });
+    input.value = '';
+  };
+
+  preventDefault = (event) => {
+    event.preventDefault();
   };
 
   showInput = () => {
     return (
-      <div className="input-form">
+      <form className="input-form" onSubmit={this.preventDefault}>
+        <input type="text" placeholder="Your skill" id="skill-input"></input>
         <input
-          type="text"
-          placeholder="Your skill"
-          onChange={this.updateSkills}
-        ></input>
-        <input
-          type="button"
+          type="submit"
           value="submit"
           className="form-button"
           onClick={this.submitSkills}
         ></input>
-      </div>
+      </form>
     );
   };
 
@@ -67,13 +72,13 @@ class Skills extends Component {
             <h2>SKILLS</h2>
           </div>
         </div>
-        {this.handleRender()}
         <div className="Open-modal-button-div">
           <ul className="Preview-panel-list">
             <button className="open-modal-button" onClick={this.setEdit}>
               +
             </button>
-            <ul></ul>
+            {this.handleRender()}
+            <SkillList skills={this.state.skills} />
           </ul>
         </div>
       </div>

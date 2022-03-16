@@ -1,9 +1,9 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
-import PreviewNameTitle from './Preview/NameTitle';
-import ContactSkillsPane from './Preview/ContactSkillsPane';
-import PreviewExperience from './Preview/ExperienceHeader';
-import Education from './Preview/Education';
+import PreviewNameTitle from './Preview/CV-header/NameTitle';
+import ContactSkillsPane from './Preview/Contact/ContactSkillsPane';
+import Experience from './Preview/Experience/ExperienceHeader';
+import Education from './Preview/Education/Education';
 
 class PreviewMain extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class PreviewMain extends Component {
         <ContactSkillsPane />
         <PreviewNameTitle />
         <Education />
-        <PreviewExperience />
+        <Experience />
       </div>
     );
   }

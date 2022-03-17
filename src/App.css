@@ -38,19 +38,6 @@ body {
   width: 100%;
   color: rgb(109, 109, 109);
 }
-/* 
-.App-info {
-  display: flex;
-  background-color: rgb(197, 197, 255);
-  padding: 10px 10px 10px 10px;
-  flex-direction: column;
-  border: 1px solid rgb(111, 111, 255);
-  border-radius: 5px;
-  position: relative;
-  width: auto;
-  padding-right: 10px;
-  text-align: center;
-} */
 
 .App-preview {
   display: flex;
@@ -256,15 +243,7 @@ ul {
   line-height: 0px;
 }
 
-.open-modal-button-div {
-  /* justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto; */
-}
-
 .open-modal-button {
-  /* position: absolute; */
   display: flex;
   display: inline-block;
   justify-content: center;

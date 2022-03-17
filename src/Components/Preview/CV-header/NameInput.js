@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 
-class ContactInput extends Component {
+class NameInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,6 @@ class ContactInput extends Component {
   showInput = () => {
     return (
       <form onSubmit={this.preventDefault}>
-        <h3>{this.state.value}</h3>
         <input
           type="text"
           id={this.props.id}
@@ -38,20 +37,17 @@ class ContactInput extends Component {
       return this.showInput();
     } else {
       return (
-        <div
-          className="placeholder"
-          value={this.props.value}
-          onClick={this.props.triggerEditState}
-        >
-          <h3 className="Preview-contact-div-headline">{this.state.value}</h3>
-          {this.props.info}
+        <div value={this.props.value} onClick={this.props.triggerEditState}>
+          <h2 id="Preview-first-last" value={this.props.value} o>
+            {this.props.info}
+          </h2>
         </div>
       );
     }
   };
 
   render() {
-    return <div>{this.handleRender()}</div>;
+    return <div> {this.handleRender()}</div>;
   }
 }
-export default ContactInput;
+export default NameInput;

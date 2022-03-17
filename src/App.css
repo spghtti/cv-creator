@@ -273,3 +273,7 @@ ul {
   height: 50px;
   font-size: 30px;
 }
+
+.Preview-contact-div-headline {
+  pointer-events: none;
+}

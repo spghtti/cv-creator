@@ -9,30 +9,45 @@ class ContactInput extends Component {
     };
   }
 
+  preventDefault = (e) => {
+    e.preventDefault();
+  };
+
   showInput = () => {
     return (
-      <div>
+      <form onSubmit={this.preventDefault}>
         <h3>{this.state.value}</h3>
         <input
           type="text"
-          placeholder="1234 Main Street, Anytown, USA 54321"
-          id="address-input"
+          placeholder={this.props.placeholder}
+          id={this.props.id}
+          onChange={this.props.updateInfo}
+          htmlFor={this.props.value}
         ></input>
         <input
           type="submit"
           value="submit"
+          id={this.props.value}
           onClick={this.props.revertEditState}
         ></input>{' '}
-      </div>
+      </form>
     );
   };
 
   handleRender = () => {
     if (this.props.edit === true) {
       return this.showInput();
-    }
-    if (this.props.edit === false) {
-      return <div className="placeholder">{this.props.address}</div>;
+    } else {
+      return (
+        <div
+          className="placeholder"
+          value={this.props.value}
+          onClick={this.props.triggerEditState}
+        >
+          <h3 className="Preview-contact-div-headline">{this.state.value}</h3>
+          {this.props.info}
+        </div>
+      );
     }
   };
 

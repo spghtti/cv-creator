@@ -8,9 +8,9 @@ class SkillList extends Component {
   render() {
     return (
       <ul>
-        {this.props.skills.map((t, index) => (
+        {this.props.skills.map((skill, index) => (
           <li key={index}>
-            <span>{t}</span>
+            <span>{skill}</span>
           </li>
         ))}
       </ul>

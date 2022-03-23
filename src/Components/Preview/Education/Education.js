@@ -13,34 +13,25 @@ class Education extends Component {
   }
 
   triggerEditState = (e) => {
-    const value = e.target.attributes.value.value;
     if (e.target.type !== 'text') {
-      if (value === 'name') {
-        this.setState({ nameEdit: !this.state.nameEdit });
-      }
-      if (value === 'title') {
-        this.setState({ titleEdit: !this.state.titleEdit });
-      }
+      this.setState({ edit: !this.state.edit });
     }
   };
 
   revertEditState = (e) => {
-    const id = e.target.attributes.id.nodeValue;
-    if (id === 'name') {
-      this.setState({ nameEdit: !this.state.nameEdit });
-    }
-    if (id === 'title') {
-      this.setState({ titleEdit: !this.state.titleEdit });
-    }
+    this.setState({ edit: !this.state.edit });
   };
 
   updateInfo = (e) => {
     const input = e.target.attributes.for.nodeValue;
-    if (input === 'name') {
-      this.setState({ name: e.target.value });
+    if (input === 'school') {
+      this.setState({ school: e.target.value });
     }
-    if (input === 'title') {
-      this.setState({ title: e.target.value });
+    if (input === 'years') {
+      this.setState({ years: e.target.value });
+    }
+    if (input === 'concentration') {
+      this.setState({ concentration: e.target.value });
     }
   };
 

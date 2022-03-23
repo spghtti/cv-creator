@@ -48,7 +48,7 @@ class TitleInput extends Component {
   };
 
   render() {
-    return <div> {this.handleRender()}</div>;
+    return <div>{this.handleRender()}</div>;
   }
 }
 export default TitleInput;

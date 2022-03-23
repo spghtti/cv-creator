@@ -11,8 +11,6 @@ class Skills extends Component {
     };
   }
 
-  updateSkills = (e) => {};
-
   submitSkills = () => {
     const input = document.getElementById('skill-input');
     const array = [...this.state.skills];
@@ -39,14 +37,6 @@ class Skills extends Component {
     );
   };
 
-  showSkills = () => {
-    this.state.skills.map((t, index) => (
-      <li key={index}>
-        <span>{t}</span>
-      </li>
-    ));
-  };
-
   setEdit = () => {
     if (this.state.edit === true) {
       this.setState({ edit: false });
@@ -58,9 +48,6 @@ class Skills extends Component {
   handleRender = () => {
     if (this.state.edit === true) {
       return this.showInput();
-    }
-    if (this.state.edit === false) {
-      return this.showSkills();
     }
   };
 

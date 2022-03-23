@@ -21,21 +21,21 @@ class EducationInput extends Component {
           id="school-input"
           placeholder="The Odin Project"
           onChange={this.props.updateInfo}
-          value="school"
+          htmlFor="school"
         ></input>
         <input
           type="text"
           id="years-input"
           placeholder="2020-2022"
           onChange={this.props.updateInfo}
-          value="years"
+          htmlFor="years"
         ></input>
         <input
           type="text"
           id="concentration-input"
           placeholder="Full-stack web development"
           onChange={this.props.updateInfo}
-          value="concentration"
+          htmlFor="concentration"
         ></input>
         <input
           type="submit"
@@ -52,7 +52,11 @@ class EducationInput extends Component {
       return this.showInput();
     } else {
       return (
-        <div className="Preview-education-entry">
+        <div
+          value={this.props.value}
+          className="Preview-education-entry"
+          onClick={this.props.triggerEditState}
+        >
           <div className="Preview-education-year">
             <p>{this.props.years}</p>
           </div>

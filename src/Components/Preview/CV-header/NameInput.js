@@ -38,7 +38,7 @@ class NameInput extends Component {
     } else {
       return (
         <div value={this.props.value} onClick={this.props.triggerEditState}>
-          <h2 id="Preview-first-last" value={this.props.value} o>
+          <h2 id="Preview-first-last" value={this.props.value}>
             {this.props.info}
           </h2>
         </div>

@@ -5,10 +5,12 @@
   overflow-anchor: none;
   height: 100vh;
   width: 100vw;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
   overflow-x: hidden;
+  margin-bottom: 10px;
 }
 
 .App-header {
@@ -18,10 +20,12 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
+  margin: 10px 0 10px 0;
 }
 
 .App-header > h1 {
   font-size: calc(20px + 2vmin);
+  font-weight: 700;
 }
 
 .App-main {
@@ -29,14 +33,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
-  width: 80vh;
-  gap: 10vw;
+  height: 90vh;
+  width: 100vw;
 }
 
 .App-subhead {
   width: 100%;
-  color: rgb(109, 109, 109);
+  color: rgb(0, 0, 0, 0.4);
   font-size: 15px;
 }
 
@@ -45,7 +48,6 @@ body {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  margin-bottom: 50px;
 }
 
 .Preview-main {
@@ -119,13 +121,19 @@ body {
   text-align: left;
   width: 80%;
   min-height: 40px;
-  padding-left: 30px;
 }
 
 li {
   position: relative;
-  left: -3px;
+  left: 20px;
   margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.Open-modal-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Preview-panel-div {
@@ -258,4 +266,11 @@ ul {
 
 .Preview-contact-div-headline {
   pointer-events: none;
+}
+
+#preview-button {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  margin: 5px 0 5px 0;
 }

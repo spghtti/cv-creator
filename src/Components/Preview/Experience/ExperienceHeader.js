@@ -71,9 +71,9 @@ class PreviewExperience extends Component {
           <button className="open-modal-button" onClick={this.setEdit}>
             +
           </button>
-          {this.handleRender()}
-          <ExperienceInput experience={this.state.experience} />
         </div>
+        {this.handleRender()}
+        <ExperienceInput experience={this.state.experience} />
       </div>
     );
   }

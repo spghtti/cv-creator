@@ -38,11 +38,7 @@ class ContactInput extends Component {
       return this.showInput();
     } else {
       return (
-        <div
-          className="placeholder"
-          value={this.props.value}
-          onClick={this.props.triggerEditState}
-        >
+        <div value={this.props.value} onClick={this.props.triggerEditState}>
           <h3 className="Preview-contact-div-headline">{this.state.value}</h3>
           {this.props.info}
         </div>

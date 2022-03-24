@@ -5,33 +5,61 @@ class Education extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      years: '2020-2022',
-      school: 'The Odin Project',
-      concentration: 'Full-stack web development',
+      education: [],
       edit: false,
     };
   }
 
-  triggerEditState = (e) => {
-    if (e.target.type !== 'text') {
-      this.setState({ edit: !this.state.edit });
+  submitEdu = () => {
+    const school = document.getElementById('school-input').value;
+    const concentration = document.getElementById('concentration-input').value;
+    const years = document.getElementById('edu-years-input').value;
+    const array = [...this.state.education];
+    const form = document.getElementById('education-form');
+    array.push({
+      school: school,
+      concentration: concentration,
+      years: years,
+    });
+    this.setState({ education: array });
+    form.reset();
+  };
+
+  preventDefault = (event) => {
+    event.preventDefault();
+  };
+
+  showInput = () => {
+    return (
+      <form id="education-form" onSubmit={this.preventDefault}>
+        <input type="text" placeholder="School" id="school-input"></input>
+        <input
+          type="text"
+          placeholder="Concentration"
+          id="concentration-input"
+        ></input>
+        <input type="text" placeholder="Years" id="edu-years-input"></input>
+        <input
+          type="submit"
+          value="submit"
+          className="form-button"
+          onClick={this.submitEdu}
+        ></input>
+      </form>
+    );
+  };
+
+  setEdit = () => {
+    if (this.state.edit === true) {
+      this.setState({ edit: false });
+    } else {
+      this.setState({ edit: true });
     }
   };
 
-  revertEditState = (e) => {
-    this.setState({ edit: !this.state.edit });
-  };
-
-  updateInfo = (e) => {
-    const input = e.target.attributes.for.nodeValue;
-    if (input === 'school') {
-      this.setState({ school: e.target.value });
-    }
-    if (input === 'years') {
-      this.setState({ years: e.target.value });
-    }
-    if (input === 'concentration') {
-      this.setState({ concentration: e.target.value });
+  handleRender = () => {
+    if (this.state.edit === true) {
+      return this.showInput();
     }
   };
 
@@ -41,17 +69,11 @@ class Education extends Component {
         <div className="Preview-education-header">
           <h2>EDUCATION</h2>
         </div>
-        <EducationInput
-          years={this.state.years}
-          school={this.state.school}
-          edit={this.state.edit}
-          concentration={this.state.concentration}
-          value="education"
-          id="education-input"
-          triggerEditState={this.triggerEditState}
-          revertEditState={this.revertEditState}
-          updateInfo={this.updateInfo}
-        />
+        <button className="open-modal-button" onClick={this.setEdit}>
+          +
+        </button>
+        {this.handleRender()}
+        <EducationInput education={this.state.education} />
       </div>
     );
   }

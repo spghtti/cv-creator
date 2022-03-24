@@ -26,7 +26,7 @@ class Skills extends Component {
   showInput = () => {
     return (
       <form className="input-form" onSubmit={this.preventDefault}>
-        <input type="text" placeholder="Your skill" id="skill-input"></input>
+        <input type="text" placeholder="Skill" id="skill-input"></input>
         <input
           type="submit"
           value="submit"
@@ -59,15 +59,15 @@ class Skills extends Component {
             <h2>SKILLS</h2>
           </div>
         </div>
-        <div className="Open-modal-button-div">
-          <ul className="Preview-panel-list">
+        <ul className="Preview-panel-list">
+          <div className="Open-modal-button-div">
             <button className="open-modal-button" onClick={this.setEdit}>
               +
             </button>
-            {this.handleRender()}
-            <SkillList skills={this.state.skills} />
-          </ul>
-        </div>
+          </div>
+          {this.handleRender()}
+          <SkillList skills={this.state.skills} />
+        </ul>
       </div>
     );
   }

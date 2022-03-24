@@ -9,7 +9,7 @@ class ExperienceInput extends Component {
   render() {
     return (
       <div className="Preview-experience-work">
-        {this.props.education.map((exp, index) => (
+        {this.props.experience.map((exp, index) => (
           <div className="Preview-experience-entry" key={index}>
             <div className="Preview-experience-year">
               <p>{exp.years}</p>

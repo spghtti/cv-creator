@@ -97,7 +97,7 @@ body {
   height: 1122px;
   width: 250px;
   background-color: #271f44;
-  justify-content: center;
+  justify-content: left;
 }
 
 .Preview-picture {
@@ -111,19 +111,21 @@ body {
 }
 
 .Preview-panel-list {
-  display: flex;
+  display: inline-block;
   color: white;
+  width: 100px;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
   width: 80%;
   min-height: 40px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
   padding-left: 30px;
 }
 
-li span {
+li {
   position: relative;
   left: -3px;
+  margin-bottom: 10px;
 }
 
 .Preview-panel-div {

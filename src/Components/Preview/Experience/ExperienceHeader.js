@@ -7,7 +7,7 @@ class PreviewExperience extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      education: [],
+      experience: [],
       edit: false,
     };
   }
@@ -16,10 +16,10 @@ class PreviewExperience extends Component {
     const employer = document.getElementById('exp-employer-input').value;
     const role = document.getElementById('exp-role-input').value;
     const years = document.getElementById('exp-years-input').value;
-    const array = [...this.state.education];
+    const array = [...this.state.experience];
     const form = document.getElementById('experience-form');
     array.push({ employer: employer, role: role, years: years });
-    this.setState({ education: array });
+    this.setState({ experience: array });
     form.reset();
   };
 
@@ -72,7 +72,7 @@ class PreviewExperience extends Component {
             +
           </button>
           {this.handleRender()}
-          <ExperienceInput education={this.state.education} />
+          <ExperienceInput experience={this.state.experience} />
         </div>
       </div>
     );

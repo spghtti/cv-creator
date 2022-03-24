@@ -9,68 +9,22 @@ class EducationInput extends Component {
     };
   }
 
-  preventDefault = (e) => {
-    e.preventDefault();
-  };
-
-  showInput = () => {
-    return (
-      <form onSubmit={this.preventDefault}>
-        <input
-          type="text"
-          id="school-input"
-          placeholder="The Odin Project"
-          onChange={this.props.updateInfo}
-          htmlFor="school"
-        ></input>
-        <input
-          type="text"
-          id="years-input"
-          placeholder="2020-2022"
-          onChange={this.props.updateInfo}
-          htmlFor="years"
-        ></input>
-        <input
-          type="text"
-          id="concentration-input"
-          placeholder="Full-stack web development"
-          onChange={this.props.updateInfo}
-          htmlFor="concentration"
-        ></input>
-        <input
-          type="submit"
-          value="submit"
-          id={this.props.value}
-          onClick={this.props.revertEditState}
-        ></input>{' '}
-      </form>
-    );
-  };
-
-  handleRender = () => {
-    if (this.props.edit === true) {
-      return this.showInput();
-    } else {
-      return (
-        <div
-          value={this.props.value}
-          className="Preview-education-entry"
-          onClick={this.props.triggerEditState}
-        >
-          <div className="Preview-education-year">
-            <p>{this.props.years}</p>
-          </div>
-          <div className="Preview-education-school">
-            <h3>{this.props.school}</h3>
-            <p>{this.props.concentration}</p>
-          </div>
-        </div>
-      );
-    }
-  };
-
   render() {
-    return <div>{this.handleRender()}</div>;
+    return (
+      <div>
+        {this.props.education.map((edu, index) => (
+          <div className="Preview-education-entry" key={index}>
+            <div className="Preview-education-year">
+              <p>{edu.years}</p>
+            </div>
+            <div className="Preview-education-school">
+              <h3>{edu.school}</h3>
+              <p>{edu.concentration}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   }
 }
 export default EducationInput;

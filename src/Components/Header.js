@@ -11,11 +11,18 @@ class Header extends Component {
 
   changeButtons = () => {
     const buttons = document.getElementsByTagName('button');
+    const forms = document.getElementsByTagName('form');
 
     for (let i = 1; i < buttons.length; i++) {
       this.state.preview
         ? (buttons[i].style.display = 'none')
         : (buttons[i].style.display = '');
+    }
+
+    for (let i = 0; i < forms.length; i++) {
+      this.state.preview
+        ? (forms[i].style.display = 'none')
+        : (forms[i].style.display = '');
     }
   };
 

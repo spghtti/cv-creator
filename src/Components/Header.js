@@ -5,12 +5,13 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      preview: false,
+      preview: true,
     };
   }
 
   changeButtons = () => {
     const buttons = document.getElementsByTagName('button');
+    const imgButton = document.getElementById('upload-label');
     const forms = document.getElementsByTagName('form');
 
     for (let i = 1; i < buttons.length; i++) {
@@ -24,6 +25,10 @@ class Header extends Component {
         ? (forms[i].style.display = 'none')
         : (forms[i].style.display = '');
     }
+
+    this.state.preview
+      ? (imgButton.style.display = 'none')
+      : (imgButton.style.display = '');
   };
 
   handleButtons = () => {

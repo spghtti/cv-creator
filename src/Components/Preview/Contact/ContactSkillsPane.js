@@ -69,10 +69,36 @@ class ContactPane extends Component {
     }
   };
 
+  showPreview = (e) => {
+    if (e.target.files.length > 0) {
+      const image = URL.createObjectURL(e.target.files[0]);
+      const preview = document.getElementById('Preview-profile-picture');
+      preview.src = image;
+      preview.style.height = '100%';
+      preview.style.width = '100%';
+      preview.style.borderRadius = '50%';
+      preview.style.overflow = 'hidden';
+      preview.style.display = 'block';
+    }
+  };
+
   render() {
     return (
       <div className="Preview-contact-skills-pane">
-        <div className="Preview-picture"></div>
+        <div className="Preview-picture" id="Preview-picture">
+          <img id="Preview-profile-picture" alt="" />
+          <div id="Preview-upload-container">
+            <label className="upload-label" id="upload-label">
+              +
+              <input
+                type="file"
+                id="image-upload"
+                accept="image/*"
+                onChange={this.showPreview}
+              ></input>
+            </label>
+          </div>
+        </div>
         <div className="Preview-contact-info">
           <div className="Preview-panel-div">
             <div className="Preview-panel-headline">

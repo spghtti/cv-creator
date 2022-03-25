@@ -16,7 +16,6 @@ class ContactInput extends Component {
   showInput = () => {
     return (
       <form onSubmit={this.preventDefault}>
-        <h3>{this.state.value}</h3>
         <input
           type="text"
           id={this.props.id}
@@ -39,7 +38,7 @@ class ContactInput extends Component {
     } else {
       return (
         <div value={this.props.value} onClick={this.props.triggerEditState}>
-          <h3 className="Preview-contact-div-headline">{this.state.value}</h3>
+          <h3 className="Preview-contact-div-headline">{this.props.value}</h3>
           {this.props.info}
         </div>
       );

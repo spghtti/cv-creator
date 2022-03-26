@@ -7,7 +7,7 @@ Create a modern CV right in your browser. Click the buttons to add your photo, e
 This is a solution to the Odin's Project's [assignment](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/cv-application) to build a React app entirely using React class components (i.e. no functional components).
 
 ## Live project demo
-:point_right: spghtti.github.io/cv-project :point_left:
+:point_right: [Click here](spghtti.github.io/cv-project) :point_left:
 
 ## Run locally
 

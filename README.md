@@ -24,7 +24,7 @@ npm start
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [React](https://reactjs.org/)
-- [create-react-app](https://create-react-app.dev/)
+- [create-react-app](https://github.com/facebook/create-react-app)
 
 
 ## License

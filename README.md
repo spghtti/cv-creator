@@ -25,8 +25,7 @@ npm start
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [React](https://reactjs.org/)
 - [create-react-app](https://create-react-app.dev/)
-- [npm](https://www.npmjs.com/)
-- [Webpack](https://webpack.js.org/)
+-
 
 
 ## License
